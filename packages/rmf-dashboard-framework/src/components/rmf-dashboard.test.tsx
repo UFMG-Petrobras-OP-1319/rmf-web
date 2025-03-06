@@ -11,6 +11,7 @@ import {
   liftsApp,
   robotMutexGroupsApp,
   robotsApp,
+  petroApp,
   tasksApp,
 } from 'rmf-dashboard-framework/micro-apps';
 import { StubAuthenticator } from 'rmf-dashboard-framework/services';
@@ -44,6 +45,7 @@ describe('RmfDashboard', () => {
     doorsApp,
     liftsApp,
     robotsApp,
+    petroApp,
     robotMutexGroupsApp,
     tasksApp,
   ];

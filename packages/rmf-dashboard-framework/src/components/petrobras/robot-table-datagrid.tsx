@@ -18,7 +18,7 @@ export interface RobotTableData {
   name: string;
   status?: Status;
   battery?: number;
-  estFinishTime?: number;
+  // estFinishTime?: number;
   lastUpdateTime?: number;
   level?: string;
   commission?: Commission;
@@ -136,16 +136,16 @@ export function RobotDataGridTable({ onRobotClick, robots }: RobotDataGridTableP
       flex: 1,
       filterable: true,
     },
-    {
-      field: 'estFinishTime',
-      headerName: 'Est. Task Finish Time',
-      width: 150,
-      editable: false,
-      valueGetter: (params: GridValueGetterParams) =>
-        params.row.estFinishTime ? new Date(params.row.estFinishTime).toLocaleString() : '-',
-      flex: 1,
-      filterable: true,
-    },
+    // {
+    //   field: 'estFinishTime',
+    //   headerName: 'Est. Task Finish Time',
+    //   width: 150,
+    //   editable: false,
+    //   valueGetter: (params: GridValueGetterParams) =>
+    //     params.row.estFinishTime ? new Date(params.row.estFinishTime).toLocaleString() : '-',
+    //   flex: 1,
+    //   filterable: true,
+    // },
     {
       field: 'level',
       headerName: 'Level',

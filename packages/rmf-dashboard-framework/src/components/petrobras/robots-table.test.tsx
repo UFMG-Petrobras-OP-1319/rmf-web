@@ -3,7 +3,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { RmfApiProvider } from '../../hooks';
 import { MockRmfApi, render, TestProviders } from '../../utils/test-utils.test';
 import { makeTaskState } from './../tasks/make-tasks.test';
-import { RobotsTable } from './robots-table';
+import { RobotsTable } from './petro-table';
 import { makeRobot } from './test-utils.test';
 
 describe('Robots table', () => {

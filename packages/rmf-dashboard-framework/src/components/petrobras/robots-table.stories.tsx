@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { RobotsTable } from './robots-table';
+import { RobotsTable } from './petro-table';
 
 export default {
   title: 'Robots/RobotsTable',

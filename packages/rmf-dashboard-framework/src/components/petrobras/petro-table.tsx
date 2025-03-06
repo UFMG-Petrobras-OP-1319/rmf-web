@@ -57,7 +57,7 @@ export const RobotsTable = () => {
                     name,
                     battery: robot.battery ? +robot.battery.toFixed(2) : undefined,
                     status: robot.status || undefined,
-                    estFinishTime: estFinishTime || undefined,
+                    // estFinishTime: estFinishTime || undefined,
                     lastUpdateTime: robot.unix_millis_time ? robot.unix_millis_time : undefined,
                     level: robot.location?.map || 'n/a',
                     commission: robot.commission || undefined,

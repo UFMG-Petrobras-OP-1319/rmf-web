@@ -1,4 +1,4 @@
-import { Box, SxProps, Typography, useTheme } from '@mui/material';
+import { Box, SxProps, Typography, Button, useTheme } from '@mui/material';
 import {
   DataGrid,
   GridCellParams,
@@ -38,6 +38,27 @@ export function RobotDataGridTable({ onRobotClick, robots }: RobotDataGridTableP
     if (onRobotClick) {
       onRobotClick(event, params.row);
     }
+  };
+
+  const TakePhotoCell = (params: GridCellParams): React.ReactNode => {
+    const handleTakePhoto = (event: React.MouseEvent<HTMLElement>) => {
+      event.stopPropagation(); // Prevents triggering row selection in a data grid
+      console.log(`Taking photo for robot: ${params.row.name}`);
+      // Add actual photo-taking logic here
+    };
+
+    return (
+      <Box>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={handleTakePhoto}
+          data-testid="take-photo-button"
+        >
+          Take Photo
+        </Button>
+      </Box>
+    );
   };
 
   const StatusCell = (params: GridCellParams): React.ReactNode => {
@@ -166,7 +187,7 @@ export function RobotDataGridTable({ onRobotClick, robots }: RobotDataGridTableP
       headerName: 'Take Photo',
       editable: false,
       flex: 1,
-      renderCell: StatusCell,
+      renderCell: TakePhotoCell,
       filterable: true,
     },
   ];

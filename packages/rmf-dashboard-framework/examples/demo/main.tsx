@@ -17,6 +17,7 @@ import {
   liftsApp,
   robotMutexGroupsApp,
   robotsApp,
+  petroApp,
   tasksApp,
 } from 'rmf-dashboard-framework/micro-apps';
 import { StubAuthenticator } from 'rmf-dashboard-framework/services';
@@ -33,6 +34,7 @@ const appRegistry: MicroAppManifest[] = [
   doorsApp,
   liftsApp,
   robotsApp,
+  petroApp,
   robotMutexGroupsApp,
   tasksApp,
 ];
@@ -58,6 +60,10 @@ const robotsWorkspace: InitialWindow[] = [
 const tasksWorkspace: InitialWindow[] = [
   { layout: { x: 0, y: 0, w: 7, h: 8 }, microApp: tasksApp },
   { layout: { x: 8, y: 0, w: 5, h: 8 }, microApp: mapApp },
+];
+
+const petroWorkspace: InitialWindow[] = [
+  { layout: { x: 0, y: 0, w: 7, h: 8 }, microApp: petroApp },
 ];
 
 export default function App() {
@@ -94,6 +100,11 @@ export default function App() {
           name: 'Tasks',
           route: 'tasks',
           element: <Workspace initialWindows={tasksWorkspace} />,
+        },
+        {
+          name: 'Petrobras',
+          route: 'petro',
+          element: <Workspace initialWindows={petroWorkspace} />,
         },
         {
           name: 'Custom',
